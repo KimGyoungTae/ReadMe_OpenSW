@@ -105,6 +105,25 @@ vim의 중립 모드에서 q를 누른 다음 매크로 이름으로 사용할 �
 
 #### 코드 넣어보기
 
+#include<stdio.h>
+#include<string.h>
+int ch10_main(void) {
+    char text[50], key[10], cipherText[50], plainText[50] = " ";
+    gets(text);
+    scanf("%s", key);
 
+    int length = strlen(key);
+    printf("암호문(16진수) = ");
+  
+    for (int i = 0; i < strlen(text); i++) {
+        cipherText[i] = text[i] ^ key[i % length];
+        plainText[i] = cipherText[i] ^ key[i % length];
+        printf("%x", cipherText[i]);
+    }
+  
+    printf("\n");
+    printf("복호문 = %s", plainText);
+    return 0;
+}
 
 
