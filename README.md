@@ -127,5 +127,3 @@ int ch10_main(void) {
     printf("복호문 = %s", plainText);
     return 0;
 }
-
-----
