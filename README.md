@@ -106,7 +106,9 @@ vim의 중립 모드에서 q를 누른 다음 매크로 이름으로 사용할 �
 #### 코드 넣어보기
 
 #include<stdio.h>
+
 #include<string.h>
+
 int ch10_main(void) {
     char text[50], key[10], cipherText[50], plainText[50] = " ";
     gets(text);
